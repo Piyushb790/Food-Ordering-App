@@ -10,7 +10,9 @@ const useRestaurantMenu = (id) => {
   }, [id]);
 
   async function getRestaurantInfo() {
-    const data = await fetch(RES_MENU_CDN + id);
+    const data = await fetch(RES_MENU_CDN + id, {
+      mode: "cors",
+    });
     const jsonData = await data.json();
     setRestroDetails(jsonData?.data?.cards[2]?.card?.card?.info);
     setRestroMenu(
