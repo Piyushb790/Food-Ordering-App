@@ -74,7 +74,7 @@ export const appRouter = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: "success",
+        path: "/success",
         element: <Success />,
       },
       {
