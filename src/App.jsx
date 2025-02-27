@@ -7,14 +7,15 @@ import ErrorPage from "./components/ErrorPage";
 import Footer from "./components/Footer";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/classComponents/ProfileClass";
-import { Suspense, lazy, useState } from "react";
-import Shimmer from "./components/Shimmer";
+import {useState } from "react";
 import { darkTheme, lightTheme } from "./components/utils/theme";
 import ThemeContext from "./components/utils/ThemeContext";
 import { Provider } from "react-redux";
 import appStore from "./components/Redux/appstore";
 import Success from "./components/Success";
 import Login from "./components/Authentiacation/Login";
+import About from "./components/About"
+import Instamart from "./components/Instamart"
 
 const AppLayout = () => {
   const [theme, setTheme] = useState(lightTheme);
@@ -39,8 +40,7 @@ const AppLayout = () => {
   );
 };
 
-const Instamart = lazy(() => import("./components/Instamart"));
-const About = lazy(() => import("./components/About"));
+
 
 export const appRouter = createBrowserRouter([
   {
