@@ -58,11 +58,7 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: "/about",
-        element: (
-          <Suspense fallback={<Shimmer />}>
-            <About />
-          </Suspense>
-        ),
+        element: <About />,
       },
       {
         path: "/profile",
@@ -83,12 +79,8 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: "/instamart",
-        element: (
-          <Suspense fallback={<Shimmer />}>
-            <Instamart />
-          </Suspense>
-        ),
-        errorElement: <ErrorPage />,
+        element: <Instamart />,
+       
       },
     ],
   },
